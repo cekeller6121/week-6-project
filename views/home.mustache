@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chitter - Home</title>
+    <meta charset="utf-8">
+    <link href="../styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/profile">Profile</a></li>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/signup">Sign Up</a></li>
+      </nav>
+    </header>
+    <h1>Chitter - Home</h1>
+    <h2>Welcome, {{username}}!</h2>
+
+    <section class="create-post">
+      <form class="post-input-form" method="post">
+        <textarea class="post-input-textbox" type="textarea" autofocus="true" maxlength="140" name="postInput" placeholder="post a Chit! (140 character max)" rows="3"></textarea>
+        <input type="submit" name="postSubmit">
+      </form>
+    </section>
+    <section class="posts-container">
+      <div class="posts">
+        <ul>
+          {{#posts}}
+            <li>{{postbody}}</li>
+          {{/posts}}
+        </ul>
+      </div>
+    </section>
+
+  </body>
+</html>

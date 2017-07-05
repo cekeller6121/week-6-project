@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+@import url('https://fonts.googleapis.com/css?family=Philosopher');
+
+* {
+  margin: 0;
+}
+
+body {
+  /*background-image: url();*/
+  background-color: CadetBlue;
+}
+
+h1 {
+  color: LightGray;
+  font-family: 'Indie Flower';
+  margin-top: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Philosopher'
+}
+
+p {
+  font-family: 'Philosopher';
+}
+
+.nav-bar ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-bar li {
+  list-style: none;
+  margin-left: 5px;
+}
+
+.login-box-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-box {
+  border: 1px solid Black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px;
+  height: 200px;
+  margin-top: 20px;
+  width: 400px;
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 75px;
+}
+
+.register-span {
+  text-align: center;
+}
+
+.signup-box-container {
+  display: flex;
+  justify-content: center;
+}
+
+.signup-box {
+  border: 1px solid Black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px;
+  height: 500px;
+  margin-top: 20px;
+  width: 450px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form input {
+  margin: 5px;
+  width: 100px;
+}
+
+.signup-form label {
+  margin-left: 5px;
+}
+
+.post-input-textbox {
+  background-color: LightGray;
+  color: Maroon;
+  font-family: 'Philosopher';
+  font-size: 16px;
+  height: 50px;
+  width: 400px;
+}
+
+.post-input-form input {
+  background-color: LightGray;
+  font-size: 16px;
+  height: 25px;
+  width: 75px;
+}
+
+.posts ul{
+  list-style: none;
+}
+
+.posts li {
+  color: Maroon;
+  font-family: 'Philosopher';
+  font-size: 30px;
+  margin: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+/**** Intentional whitespace ****/
