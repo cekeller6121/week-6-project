@@ -2,7 +2,7 @@
 module.exports = function(sequelize, DataTypes) {
   var post = sequelize.define('post', {
     postbody: DataTypes.STRING,
-    isliked: DataTypes.BOOLEAN
+    postauthor: DataTypes.STRING
   }, {
     classMethods: {
       associate: function(models) {

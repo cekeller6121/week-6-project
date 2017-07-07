@@ -11,9 +11,6 @@ module.exports = {
       postbody: {
         type: Sequelize.STRING
       },
-      isliked: {
-        type: Sequelize.BOOLEAN
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
@@ -21,6 +18,11 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+        postauthor: {
+          type: Sequelize.STRING,
+          allowNull: false
+        }
       }
     });
   },
