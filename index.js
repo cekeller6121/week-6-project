@@ -115,6 +115,14 @@ app.post('/home', function(req, res) {
 res.redirect('home');
 });
 
+app.post('/home/likepost', function(req, res) {
+  const updatePost = models.post.update({
+    likedby: req.session.username},
+    {where: {id: req.body.likeButton}
+  });
+  // res.redirect('home'); doesn't work and I don't know why! 
+});
+
 
 
 

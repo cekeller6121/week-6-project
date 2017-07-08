@@ -2,7 +2,8 @@
 module.exports = function(sequelize, DataTypes) {
   var post = sequelize.define('post', {
     postbody: DataTypes.STRING,
-    postauthor: DataTypes.STRING
+    postauthor: DataTypes.STRING,
+    likedbythree: DataTypes.ARRAY(DataTypes.STRING)
   }, {
     classMethods: {
       associate: function(models) {

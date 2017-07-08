@@ -20,7 +20,7 @@
     <h2>Welcome, {{username}}!</h2>
 
     <section class="create-post">
-      <form class="post-input-form" method="post">
+      <form action="/home" class="post-input-form" method="post">
         <textarea class="post-input-textbox" type="textarea" autofocus="true" maxlength="140" name="postInput" placeholder="post a Chit! (140 character max)" rows="3"></textarea>
         <input type="submit" name="postSubmit">
       </form>
@@ -29,7 +29,7 @@
       <div class="posts">
         <ul>
           {{#posts}}
-            <li>{{postauthor}}: {{postbody}}</li>
+            <li>{{postauthor}}: {{postbody}} <form action="/home/likepost" method="post"><button name="likeButton" value="{{dataValues.id}}">Like Chit</button></form></li>
           {{/posts}}
         </ul>
       </div>
