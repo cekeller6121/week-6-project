@@ -120,14 +120,14 @@ app.post('/home/likepost', function(req, res) {
     likedby: req.session.username},
     {where: {id: req.body.likeButton}
   });
-  // res.redirect('home'); doesn't work and I don't know why! 
+  // res.redirect('home'); doesn't work and I don't know why!
 });
 
 
 
 
 
-app.listen(3000, function(req, res) {
+app.listen(process.env.PORT || 3000, function(req, res) {
   console.log("Chitter connected");
 });
 
