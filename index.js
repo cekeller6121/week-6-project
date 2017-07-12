@@ -5,6 +5,7 @@ const session = require('express-session');
 const path = require('path');
 const bodyParser = require('body-parser');
 const models = require('./models');
+const pg = require('pg')
 
 var app = express();
 
