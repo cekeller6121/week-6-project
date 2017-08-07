@@ -45,7 +45,7 @@ app.get('/profile', function(req, res) {
 // *** the home page displays a feed of posts and first checks for an authenticated session ***
 app.get('/home', function(req, res) {
   if (req.session.authenticated === true) {
-    models.post.findAll().then(function(posts) {
+    models.posts.findAll().then(function(posts) {
       res.render('home', {posts:posts, username:req.session.username});
     });
   } else {
@@ -75,12 +75,12 @@ app.get('/home', function(req, res) {
 app.post('/login', function(req, res) {
   var username = req.body.username; // sets username and password from user's input
   var password = req.body.password;
-  var checkUser = models.user.findOne({ where: {username: username}, password: password}).then(function(user){ // checks the user table for correct user/password
+  var checkUser = models.users.findOne({ where: {username: username}, password: password}).then(function(user){ // checks the user table for correct user/password
     console.log("checkUser is: " + checkUser);
-    if (user.username !== username || user.password !== password) {
+    if (users.username !== username || users.password !== password) {
       res.redirect('/login'); // first checks for incorrect info and redirects
       console.log("user not logged in");
-    } else if (user.username === username && user.password === password) {
+    } else if (users.username === username && users.password === password) {
       req.session.authenticated = true; // directs the user to home if correct info is found
       req.session.username = username;
       res.redirect('/home');
@@ -96,7 +96,7 @@ app.post('/signup', function(req, res) {
   if (req.body.passWord !== req.body.confirmPassword) {
     res.redirect('signup')
   } else {
-  const user = models.user.build({ // builds to the user table
+  const user = models.users.build({ // builds to the user table
     username: req.body.userName,
     password: req.body.passWord
   });
@@ -108,7 +108,7 @@ app.post('/signup', function(req, res) {
 });
 
 app.post('/home', function(req, res) {
-  const post = models.post.build({ // builds to the posts table
+  const post = models.posts.build({ // builds to the posts table
     postbody: req.body.postInput,
     postauthor: req.session.username
   });
@@ -116,13 +116,14 @@ app.post('/home', function(req, res) {
 res.redirect('home');
 });
 
-app.post('/home/likepost', function(req, res) {
-  const updatePost = models.post.update({
-    likedby: req.session.username},
-    {where: {id: req.body.likeButton}
-  });
+// I'm coming back to the likes feature
+// app.post('/home/likepost', function(req, res) {
+//   const updatePost = models.posts.update({
+//     likedby: req.session.username},
+//     {where: {id: req.body.likeButton}
+//   });
   // res.redirect('home'); doesn't work and I don't know why!
-});
+// });
 
 
 
