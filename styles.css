@@ -7,8 +7,10 @@
 }
 
 body {
-  /*background-image: url();*/
-  background-color: CadetBlue;
+  background-image: url('social-media-backgrnd.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*background-color: CadetBlue;*/
 }
 
 h1 {

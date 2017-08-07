@@ -77,10 +77,10 @@ app.post('/login', function(req, res) {
   var password = req.body.password;
   var checkUser = models.users.findOne({ where: {username: username}, password: password}).then(function(user){ // checks the user table for correct user/password
     console.log("checkUser is: " + checkUser);
-    if (users.username !== username || users.password !== password) {
+    if (user.username !== username || user.password !== password) {
       res.redirect('/login'); // first checks for incorrect info and redirects
       console.log("user not logged in");
-    } else if (users.username === username && users.password === password) {
+    } else if (user.username === username && user.password === password) {
       req.session.authenticated = true; // directs the user to home if correct info is found
       req.session.username = username;
       res.redirect('/home');
