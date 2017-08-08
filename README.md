@@ -2,3 +2,5 @@ This is my project for Week 6 of The Iron Yard. We were supposed to create a web
 
 Project Assign Date: June 30, 2017
 Project Due Date: July 7, 2017
+
+**Project Revisit start date: August 7**
