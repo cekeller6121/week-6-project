@@ -10,7 +10,6 @@ body {
   background-image: url('social-media-backgrnd.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  /*background-color: CadetBlue;*/
 }
 
 h1 {
@@ -106,21 +105,14 @@ p {
   width: 400px;
 }
 
-.post-input-form input {
-  background-color: LightGray;
-  font-size: 16px;
-  height: 25px;
-  width: 75px;
-}
-
 .posts ul{
   list-style: none;
 }
 
 .posts li {
-  color: Maroon;
+  color: White;
   font-family: 'Philosopher';
-  font-size: 30px;
+  font-size: 28px;
   margin: 15px;
 }
 
