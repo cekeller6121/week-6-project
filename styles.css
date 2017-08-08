@@ -59,6 +59,12 @@ p {
   margin: 15px;
 }
 
+#buttons {
+  color: Blue;
+  font-family: 'Indie Flower';
+  font-size: 20px;
+}
+
 .register-span {
   text-align: center;
 }
@@ -94,6 +100,11 @@ p {
 
 .signup-form label {
   margin-left: 5px;
+}
+
+.home-welcome {
+  color: Black;
+  margin-left: 15px;
 }
 
 .post-input-textbox {
