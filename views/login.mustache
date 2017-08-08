@@ -4,6 +4,7 @@
     <title>Welcome to Chitter - Login</title>
     <meta charset="utf-8">
     <link href="../styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   </head>
   <body>
     <header>
@@ -18,11 +19,11 @@
     </header>
     <h1>Welcome to Chitter! Login to continue.</h1>
     <section class="login-box-container">
-      <div class="login-box">
+      <div class="form-group">
         <form action="/login" class="login-form" method="post">
-          <input type="text" name="username" placeholder="enter username" autofocus="true">
-          <input type="password" name="password" placeholder="enter password">
-          <input type="submit" value="Let's Chit!">
+          <input class="form-control" type="text" name="username" placeholder="enter username" autofocus="true">
+          <input class="form-control" type="password" name="password" placeholder="enter password">
+          <input class="form-control" type="submit" value="Let's Chit!">
         </form>
         <span class="register-span"><a href="/signup">No account? Chit one here!</a>
       </div>
