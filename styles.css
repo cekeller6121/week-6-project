@@ -43,16 +43,16 @@ p {
   justify-content: center;
 }
 
-.form-group {
+/*.form-group {
   border: 1px solid Black;
   border-radius: 10px;
   box-shadow: 2px 2px 2px 2px;
   height: 200px;
   margin-top: 20px;
   width: 400px;
-}
+}*/
 
-.login-form {
+.form-control {
   display: flex;
   justify-content: center;
   margin-top: 75px;
