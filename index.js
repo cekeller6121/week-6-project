@@ -108,11 +108,17 @@ app.post('/signup', function(req, res) {
 });
 
 app.post('/home', function(req, res) {
+  let postbody = req.body.postInput;
+  let postauthor = req.session.username;
+  if (postbody === "") {
+    return
+  } else {
   const post = models.posts.build({ // builds to the posts table
-    postbody: req.body.postInput,
-    postauthor: req.session.username
+    postbody: postbody,
+    postauthor: postauthor
   });
   post.save();
+}
 res.redirect('home');
 });
 
