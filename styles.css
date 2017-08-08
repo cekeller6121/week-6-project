@@ -43,23 +43,30 @@ p {
   justify-content: center;
 }
 
-/*.form-group {
-  border: 1px solid Black;
-  border-radius: 10px;
-  box-shadow: 2px 2px 2px 2px;
+.login-title {
+  margin: 0;
+  text-align: center;
+}
+
+.form-group {
   height: 200px;
-  margin-top: 20px;
   width: 400px;
-}*/
+}
 
 .form-control {
+  background-color: inherit;
   display: flex;
   justify-content: center;
-  margin-top: 75px;
+  margin: 15px;
 }
 
 .register-span {
   text-align: center;
+}
+
+.register-span a {
+  color: White;
+  margin-left: 15px;
 }
 
 .signup-box-container {
