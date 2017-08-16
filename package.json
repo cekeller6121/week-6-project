@@ -4,7 +4,8 @@
   "description": "Write some chitter",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "C. Keller",
   "license": "ISC",
@@ -16,5 +17,8 @@
     "mustache-express": "^1.2.5",
     "pg": "^6.4.1",
     "sequelize": "^4.4.2"
+  },
+  "engines": {
+    "node": "7.9.0"
   }
 }
