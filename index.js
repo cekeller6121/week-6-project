@@ -139,6 +139,12 @@ app.listen(process.env.PORT || 3000, function(req, res) {
   console.log("Chitter connected");
 });
 
+// var port = process.env.PORT || 8000
+//
+// server.listen(port, function() {
+//     console.log("App is running on port " + port);
+// });
+
 
 
 
